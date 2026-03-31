@@ -67,9 +67,10 @@ const Activities = () => {
             <thead>
               <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Calories Burned</th>
+                <th scope="col">User</th>
+                <th scope="col">Activity Type</th>
+                <th scope="col">Duration (min)</th>
+                <th scope="col">Date</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
@@ -79,10 +80,13 @@ const Activities = () => {
                   <td>
                     <span className="badge bg-primary">{activity.id}</span>
                   </td>
-                  <td><strong>{activity.name}</strong></td>
-                  <td>{activity.description}</td>
+                  <td><strong>{activity.user}</strong></td>
+                  <td>{activity.activity_type}</td>
                   <td>
-                    <span className="badge bg-success">{activity.calories_burned} cal</span>
+                    <span className="badge bg-info">{activity.duration} min</span>
+                  </td>
+                  <td>
+                    <small className="text-muted">{activity.date}</small>
                   </td>
                   <td>
                     <button className="btn btn-sm btn-outline-primary me-2">Edit</button>
